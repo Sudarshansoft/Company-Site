@@ -1,11 +1,34 @@
-import RelatedPost from "@/components/Blog/RelatedPost";
-import ProjectData from "@/components/Blog/projectData";
+import RelatedProject from "@/components/Project/RelatedProject";
+import ProjectData from "@/components/Project/projectData";
 import Image from "next/image";
+
+function getTopRelatedProjects(allProjects, currentProjectId) {
+    const currentProject = allProjects.find(p => p._id === currentProjectId);
+    if (!currentProject) return [];
+
+    const related = allProjects
+        .filter(p => p._id !== currentProjectId && p.category === currentProject.category)
+        .map(p => {
+            const techMatches = p.technologies.filter(tech =>
+                currentProject.technologies.includes(tech)
+            );
+            const score = techMatches.length;
+
+            return { id: p._id, score };
+        });
+
+    return related
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3) // This naturally returns 1 or 2 if only that many exist
+        .map(p => p.id);
+}
+
 
 
 const ProjectDetails = async ({params}:{params: Promise<{ projectName: string}>}) => {
     const projectName = (await params).projectName;
     const project = ProjectData.find((proj) => proj.title === decodeURIComponent(projectName));
+    const relatedProjectIds = getTopRelatedProjects(ProjectData, project._id);
 
     if (!project) {
         return <p className="text-white">Project not found</p>;
@@ -61,10 +84,7 @@ const ProjectDetails = async ({params}:{params: Promise<{ projectName: string}>}
                                     </div>
                                 </div>
                             )}
-
-
-
-                            <RelatedPost />
+                            <RelatedProject relatedProjectIds = {relatedProjectIds}/>
                         </div>
 
                         <div className="lg:w-2/3">
@@ -85,26 +105,6 @@ const ProjectDetails = async ({params}:{params: Promise<{ projectName: string}>}
                                 </h2>
 
                                 <ul className="mb-9 flex flex-wrap gap-4 text-sm">
-                                    <li className="flex items-center gap-2 rounded-full bg-[#f9fafb] px-4 py-2 shadow-sm dark:bg-[#1e1e2d]">
-                                        <svg
-                                            className="h-4 w-4 text-primary"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path d="M8 7V3M16 7V3M3 11H21M5 5H19C20.1046 5 21 5.89543 21 7V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7C3 5.89543 3.89543 5 5 5Z" />
-                                        </svg>
-                                        <span className="text-black dark:text-white font-medium">Published On:</span>
-                                        <span className="ml-1 text-gray-600 dark:text-gray-300 font-normal">
-                                            {project.createdDate.toLocaleDateString("en-US", {
-                                                year: "numeric",
-                                                month: "short",
-                                                day: "numeric",
-                                            })}
-                                        </span>
-                                    </li>
-
                                     <li className="flex items-center gap-2 rounded-full bg-[#f9fafb] px-4 py-2 shadow-sm dark:bg-[#1e1e2d]">
                                         <svg
                                             className="h-4 w-4 text-primary"

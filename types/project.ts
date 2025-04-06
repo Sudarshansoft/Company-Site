@@ -4,7 +4,6 @@ export type Project = {
   _id: number;
   title: string;
   category: ProjectCategory;
-  createdDate: Date;
   technologies: Technology[];
   description: string;
   details: string[];
@@ -12,5 +11,5 @@ export type Project = {
   demoLink: string;
   bannerImage: string;
   images: string[];
-  testinomials: string[];
+  testimonials: string[];
 };
