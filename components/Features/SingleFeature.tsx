@@ -33,17 +33,17 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
 
       {/* Icon */}
       <div
-        className="z-10 mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 transition-all duration-300"
+        className="z-10 mb-5 flex h-14 w-14 items-center justify-center rounded-xl transition-all duration-300"
         style={{
           transform: isHovered ? "scale(1.15)" : "scale(1)",
         }}
       >
-        <Image
-          src={icon}
-          alt={title}
-          width={isHovered ? 38 : 30}
-          height={isHovered ? 38 : 30}
-        />
+        <div
+          className="transition-transform duration-300"
+          style={{ transform: isHovered ? "scale(1.15)" : "scale(1)" }}
+        >
+          {icon}
+        </div>
       </div>
 
       {/* Title */}
