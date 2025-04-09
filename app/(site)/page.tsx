@@ -28,7 +28,7 @@ export default function Home() {
       <Brands />
       <Feature />
       <OurProcess />
-      <FeaturesTab />
+      {/* <FeaturesTab /> */}
       <WhyChooseUs />
       <FunFact />
       <Integration />
