@@ -5,6 +5,7 @@ import Feature from "@/components/Features";
 import OurProcess from "@/components/OurProcess";
 import FeaturesTab from "@/components/FeaturesTab";
 import WhyChooseUs from "@/components/WhyChooseUs";
+console.log("WhyChooseUs component:", WhyChooseUs);
 import FunFact from "@/components/FunFact";
 import Integration from "@/components/Integration";
 import CTA from "@/components/CTA";
