@@ -7,7 +7,7 @@ import FeaturesTab from "@/components/FeaturesTab";
 import WhyChooseUs from "@/components/WhyChooseUs";
 console.log("WhyChooseUs component:", WhyChooseUs);
 import FunFact from "@/components/FunFact";
-import Integration from "@/components/Integration";
+import OurCoreStrengths from "@/components/OurCoreStrengths";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
@@ -32,7 +32,7 @@ export default function Home() {
       {/* <FeaturesTab /> */}
       <WhyChooseUs />
       <FunFact />
-      <Integration />
+      <OurCoreStrengths />
       <CTA />
       <FAQ />
       <Testimonial />
