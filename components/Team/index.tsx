@@ -1,13 +1,13 @@
-"use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CustomModal from "../CustomModal";
 
 const teamMembers = [
     {
         name: "Bryan Wiener",
         title: "Executive Chairman",
         image: "/images/team/team.jfif",
-        bio: "Bryan is the Executive Chairman at the company with extensive experience in leadership."
+        bio: "Bryan is the Executive Chairman at the company with extensive experience in leadership..."
     },
     {
         name: "Sarah Hofstetter",
@@ -37,6 +37,19 @@ const teamMembers = [
 
 export default function TeamPage() {
     const [selectedMember, setSelectedMember] = useState(null);
+    const [shuffledTeamMembers, setShuffledTeamMembers] = useState([]);
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    useEffect(() => {
+        setShuffledTeamMembers(shuffleArray([...teamMembers]));
+    }, []);
 
     useEffect(() => {
         if (selectedMember) {
@@ -57,7 +70,7 @@ export default function TeamPage() {
                     <p className="text-blue-600 font-semibold uppercase mb-2">Our Team</p>
                     <h2 className="text-4xl font-bold text-gray-900 mb-10">Meet the Leaders</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-3 gap-y-6">
-                        {teamMembers.map((member, index) => (
+                        {shuffledTeamMembers.map((member, index) => (
                             <div key={index} className="flex flex-col items-center text-center">
                                 <div className="relative w-32 h-32 mb-2">
                                     <Image
@@ -83,32 +96,10 @@ export default function TeamPage() {
             </div>
 
             {selectedMember && (
-                <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center mt-14">
-                    <div className="absolute inset-0 backdrop-blur-sm pointer-events-none"></div>
-                    <div className="bg-white w-[800px] h-[600px] rounded-lg shadow-lg overflow-hidden relative z-10 pointer-events-auto flex">
-                        <button
-                            onClick={() => setSelectedMember(null)}
-                            className="absolute top-4 right-4 bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center z-20"
-                        >
-                            ×
-                        </button>
-                        <div className="w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center p-6">
-                            <Image
-                                src={selectedMember.image}
-                                alt={selectedMember.name}
-                                width={200}
-                                height={200}
-                                className="rounded"
-                            />
-    
-                        </div>
-                        <div className="w-1/2 p-6 overflow-y-auto">
-                            <h2 className="text-2xl font-bold text-gray-800">{selectedMember.name}</h2>
-                            <p className="text-gray-500 mb-4">{selectedMember.title}</p>
-                            <p className="text-gray-700 leading-relaxed whitespace-pre-line">{selectedMember.bio}</p>
-                        </div>
-                    </div>
-                </div>
+                <CustomModal
+                    member={selectedMember}
+                    onClose={() => setSelectedMember(null)}
+                />
             )}
         </div>
     );

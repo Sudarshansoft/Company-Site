@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import TeamPage from "@/components/Team";
+import { UserCheck, Clock, Folder } from "lucide-react";
 
 const Counter = ({ end, suffix = "" }) => {
     const [count, setCount] = useState(0);
@@ -21,69 +22,67 @@ const Counter = ({ end, suffix = "" }) => {
         return () => clearInterval(counter);
     }, [end]);
 
-    return <h3 className="text-2xl font-bold text-blue-600">{count}{suffix}</h3>;
+    return (
+        <h3 className="text-lg font-semibold text-blue-600">
+            {count}
+            {suffix}
+        </h3>
+    );
 };
 
 export default function AboutCompany() {
     return (
         <>
             <div className="bg-white py-16 px-4 sm:px-6 lg:px-16 mt-16">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-                    {/* Left side images */}
-                    <div className="relative w-fit">
-                        <div className="absolute top-0 left-0 w-48 h-48 bg-blue-100 rounded-lg -z-10"></div>
-                        <div className="absolute top-10 left-10 w-48 h-48 bg-blue-200 rounded-full -z-10"></div>
-                        <div className="relative z-10">
-                            <div className="relative w-[350px] h-[250px]">
-                                <Image
-                                    src="/images/about/about_1.jpg"
-                                    alt="Team Working"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-xl shadow-lg"
-                                />
-                            </div>
-                            <div className="relative w-[350px] h-[250px] -mt-12 ml-45">
-                                <Image
-                                    src="/images/about/about_2.jpg"
-                                    alt="Team Meeting"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-xl shadow-lg"
-                                />
-                            </div>
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    {/* Left Side Image - Hidden on Mobile */}
+                    <div className="hidden md:block">
+                        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/images/about/about_1.jpg"
+                                alt="About Us"
+                                fill
+                                className="object-cover rounded-xl"
+                            />
                         </div>
                     </div>
 
-                    {/* Right side content */}
-                    <div>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">About Us</h2>
+                    {/* Right Side Content */}
+                    <div className="flex flex-col justify-start">
+                        <h1 className="text-3xl font-bold text-blue-600 mb-6">About us</h1>
                         <p className="text-gray-600 mb-4 leading-relaxed">
-                            We are not just a software development company — we are a team of passionate innovators, creative thinkers, and tech enthusiasts committed to transforming your ideas into powerful digital experiences. At the heart of our company lies a deep desire to solve real-world problems through technology that’s smart, intuitive, and built to last.
+                            We are a team of developers, designers, and visionaries dedicated
+                            to building powerful and elegant digital products. With a focus on
+                            performance, creativity, and impact — we turn complex ideas into
+                            simple, user-friendly software.
                         </p>
                         <p className="text-gray-600 leading-relaxed mb-8">
-                            From startups to enterprise clients, we collaborate closely with every partner to understand their vision and deliver tailor-made solutions that exceed expectations. Whether it's building custom applications, optimizing user journeys, or boosting online presence with effective SEO strategies — we go the extra mile, every time. Our culture thrives on innovation, transparency, and a relentless drive for excellence.
+                            From web platforms to AI-driven tools, we combine technology with
+                            design to deliver solutions that truly matter.
                         </p>
 
-                        {/* Stats */}
-                        <div className="flex flex-wrap gap-8">
-                            <div>
+                        {/* Stats Section */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div className="bg-white rounded-xl shadow-md p-4 text-center border min-w-0">
+                                <UserCheck className="mx-auto text-blue-500 mb-2" size={24} />
                                 <Counter end={85} suffix="+" />
-                                <p className="text-sm text-gray-700">Happy Clients</p>
+                                <p className="text-sm text-gray-700 break-words">Happy Clients</p>
                             </div>
-                            <div>
-                                <Counter end={95000} suffix="" />
-                                <p className="text-sm text-gray-700">Hours Worked</p>
+                            <div className="bg-white rounded-xl shadow-md p-4 text-center border min-w-0">
+                                <Clock className="mx-auto text-blue-500 mb-2" size={24} />
+                                <Counter end={95000} suffix="+" />
+                                <p className="text-sm text-gray-700 break-words">Hours Worked</p>
                             </div>
-                            <div>
+                            <div className="bg-white rounded-xl shadow-md p-4 text-center border min-w-0">
+                                <Folder className="mx-auto text-blue-500 mb-2" size={24} />
                                 <Counter end={145} suffix="+" />
-                                <p className="text-sm text-gray-700">Projects Done</p>
+                                <p className="text-sm text-gray-700 break-words">Projects Done</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <TeamPage></TeamPage>
+            <TeamPage />
         </>
     );
 }
