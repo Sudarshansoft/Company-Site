@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -14,12 +15,27 @@ const Hero = () => {
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className=" md:w-1/2">
+            <div className="md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 Building Future-Ready Software Solutions
               </h4>
-              <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-               Code Your Vision into Reality – Let's Innovate Together 
+              <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">
+                Code Your Vision into Reality –
+                <span className="ml-2 text-primary">
+                  <Typewriter
+                    words={[
+                      "Let's Innovate Together",
+                      "Build With Confidence",
+                      "Go Beyond Limits"
+                    ]}
+                    loop={true}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={80}
+                    deleteSpeed={50}
+                    delaySpeed={2000}
+                  />
+                </span>
               </h1>
               <p>
                 Transforming ideas into powerful digital solutions with innovation and expertise. From custom software to AI-driven applications, we build scalable and future-proof technology for businesses of all sizes.
@@ -62,7 +78,7 @@ const Hero = () => {
                   height={21.66}
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
-                <div className=" relative aspect-[700/444] w-full">
+                <div className="relative aspect-[700/444] w-full">
                   <Image
                     className="shadow-solid-l dark:hidden"
                     src="/images/hero/home.svg"
