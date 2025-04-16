@@ -7,27 +7,27 @@ import SectionHeader from "../Common/SectionHeader";
 const features = [
   {
     title: "Agile Development",
-    icon: "/images/brand/brand-07.svg",
+    icon: "/images/brand/agile.png",
   },
   {
     title: "Fast Delivery",
-    icon: "/images/brand/brand-08.svg",
+    icon: "/images/brand/speed.png",
   },
   {
     title: "Custom Support",
-    icon: "/images/brand/brand-09.svg",
+    icon: "/images/brand/support.png",
   },
   {
     title: "Scalability",
-    icon: "/images/brand/brand-10.svg",
+    icon: "/images/brand/scalability.png",
   },
   {
     title: "Security First",
-    icon: "/images/brand/brand-11.svg",
+    icon: "/images/brand/secure.png",
   },
   {
     title: "Innovation-Driven",
-    icon: "/images/brand/brand-12.svg",
+    icon: "/images/brand/solution.png",
   },
 ];
 
