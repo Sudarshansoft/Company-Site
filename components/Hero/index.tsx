@@ -15,7 +15,7 @@ const Hero = () => {
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className="md:w-1/2">
+            <div className="md:w-full lg:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 Building Future-Ready Software Solutions
               </h4>
@@ -24,9 +24,9 @@ const Hero = () => {
                 <span className="ml-2 text-primary">
                   <Typewriter
                     words={[
-                      "Let's Innovate Together",
-                      "Build With Confidence",
-                      "Go Beyond Limits"
+                      "Let's Innovate",
+                      "Unite Ideas",
+                      "Craft Tomorrow"
                     ]}
                     loop={true}
                     cursor
