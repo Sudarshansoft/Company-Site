@@ -1,130 +1,112 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+const contactItems = [
+  {
+    label: "Email",
+    value: "futureforge9188@gmail.com",
+    icon: "/images/icon/email.svg",
+  },
+  {
+    label: "Phone",
+    value: "+009 42334 6343 843",
+    icon: "/images/icon/phone.svg",
+  },
+  {
+    label: "Address",
+    value: (
+      <>
+        316, Green Plaza, Golden Chowk,<br />
+        Mota Varachha, Surat, Gujarat - 394101
+      </>
+    ),
+    icon: "/images/icon/location.svg",
+  },
+];
+
 const Footer = () => {
   return (
-    <footer className="bg-[#121829] text-white overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-y-0 md:gap-x-10 lg:gap-x-20">
-          {/* ABOUT SECTION */}
+    <footer className="w-full bg-[#121829] text-white text-base overflow-hidden">
+      <div className="px-6 sm:px-10 lg:px-20 xl:px-32 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-left max-w-screen-xl mx-auto">
+          {/* SOLID Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-primary mb-4">SOLID</h3>
-            <p className="text-sm text-gray-400 mb-6 max-w-xs">
-            We're a passionate team delivering innovative digital solutions tailored to your business needs. Let’s build something amazing together.
+            <h3 className="text-2xl font-bold text-blue-500 mb-5">SOLID</h3>
+            <p className="text-gray-400 text-lg mb-6 leading-relaxed">
+              We’re a passionate team delivering innovative digital solutions tailored to your business needs.
             </p>
-            <div className="flex space-x-2">
-            {[
-              {
-                href: "#",
-                src: "/images/social/linkedin.svg",
-                alt: "LinkedIn",
-                hoverColor: "hover:bg-[#0077b5]",
-              },
-              {
-                href: "#",
-                src: "/images/social/instagram.svg",
-                alt: "Instagram",
-                hoverColor: "hover:bg-[#E4405F]",
-              },
-              {
-                href: "#",
-                src: "/images/social/whatsapp.svg",
-                alt: "WhatsApp",
-                hoverColor: "hover:bg-[#25D366]",
-              },
-              {
-                href: "#",
-                src: "/images/social/facebook.svg",
-                alt: "Facebook",
-                hoverColor: "hover:bg-[#1877F2]",
-              },
-            ].map((icon, index) => (
-              <Link
-                key={index}
-                href={icon.href}
-                className={`w-9 h-9 rounded-full bg-[#1f273e] ${icon.hoverColor} flex items-center justify-center transition-colors duration-300`}
-              >
-                <Image
-                  src={icon.src}
-                  alt={icon.alt}
-                  width={18}
-                  height={18}
-                  className="invert"
-                />
-              </Link>
-            ))}
-          </div>
+            <div className="flex gap-4">
+              {[
+                { src: "/images/social/linkedin.svg", alt: "LinkedIn" },
+                { src: "/images/social/instagram.svg", alt: "Instagram" },
+                { src: "/images/social/whatsapp.svg", alt: "WhatsApp" },
+                { src: "/images/social/facebook.svg", alt: "Facebook" },
+              ].map((icon, index) => (
+                <Link key={index} href="#" aria-label={icon.alt}>
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1f273e] hover:bg-blue-500 transition">
+                    <Image src={icon.src} alt={icon.alt} width={20} height={20} className="invert" />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </motion.div>
 
-          {/* PAGES SECTION */}
+          {/* Contact Us Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="md:flex md:justify-center"
           >
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Pages</h4>
-              <ul className="space-y-3 text-gray-300 text-sm">
-                <li>
-                  <Link href="/" className="hover:text-primary">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects" className="hover:text-primary">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:text-primary">
-                    About Us
-                  </Link>
-                </li>
-              </ul>
+            <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
+            <div className="space-y-5">
+              {contactItems.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-4 text-gray-300">
+                  <Image src={item.icon} alt={item.label} width={20} height={20} className="invert mt-1" />
+                  <div>
+                    <p className="text-white font-medium mb-1">{item.label}:</p>
+                    <p className="leading-relaxed text-base">{item.value}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
-          {/* CONTACT SECTION */}
+          {/* Company Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:flex md:justify-end"
           >
-            <div className="max-w-xs">
-              <h4 className="text-lg font-semibold mb-6">Contact</h4>
-              <p className="text-sm text-gray-400 mb-3">
-                <span className="font-medium text-white">Location:</span>
-                <br />
-                316, Green Plaza, Mota Varachha, Surat, Gujarat - 394101
-              </p>
-              <p className="text-sm text-gray-400 mb-3">
-                <span className="font-medium text-white">Email:</span>
-                <br />
-                futureforge9188@gmail.com
-              </p>
-              <p className="text-sm text-gray-400">
-                <span className="font-medium text-white">Phone:</span>
-                <br />
-                +009 42334 6343 843
-              </p>
-            </div>
+            <h4 className="text-xl font-semibold mb-6">Company</h4>
+            <ul className="space-y-4 text-gray-300 text-base">
+              {[
+                { label: "Home", href: "/" },
+                { label: "Projects", href: "/projects" },
+                { label: "About Us", href: "/about" },
+              ].map((item, idx) => (
+                <li key={idx}>
+                  <Link href={item.href} className="hover:text-blue-500 transition">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </div>
 
-      {/* COPYRIGHT BAR */}
-      <div className="border-t border-strokedark py-6 text-center text-sm text-gray-400">
+      {/* Bottom Line */}
+      <div className="border-t border-[#1f273e] text-center py-6 px-4 text-gray-500 text-sm">
         &copy; 2025 <span className="text-white font-semibold">Solid</span>. All rights reserved.
       </div>
     </footer>
