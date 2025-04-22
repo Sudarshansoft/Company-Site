@@ -68,7 +68,7 @@ export default function TeamPage() {
             <div className={`bg-white py-16 px-4 sm:px-6 lg:px-16 mt-16 ${selectedMember ? 'overflow-hidden max-h-screen' : ''}`}>
                 <div className="max-w-7xl mx-auto text-center">
                     <p className="text-blue-600 font-semibold uppercase mb-2">Our Team</p>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-10">Meet the Leaders</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-15">Meet the Leaders</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-3 gap-y-6">
                         {shuffledTeamMembers.map((member, index) => (
                             <div key={index} className="flex flex-col items-center text-center">

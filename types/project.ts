@@ -10,6 +10,6 @@ export type Project = {
   keyObjectives: string[];
   demoLink: string;
   bannerImage: string;
-  images: string[];
-  testimonials: string[];
+  images: Object[];
+  testimonials: Object[];
 };

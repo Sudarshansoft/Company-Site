@@ -86,4 +86,9 @@ export enum Technology {
     Kubernetes = "Kubernetes",
     Jenkins = "Jenkins",
     CircleCI = "CircleCI",
+    VLM = "VLM",
+    DL = "DL",
+    Stripe = "Stripe",
+    RazorPay = "RazorPay",
+    AntDesign = "Ant Design",
 }

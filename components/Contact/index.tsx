@@ -151,7 +151,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-7">
-              <h4 className="mb-3 text-xl font-medium text-black dark:text-white">
+              <h4 className="mb-4 text-xl font-medium text-black dark:text-white">
                 <FaUserPlus className="text-3xl inline mr-3 text-blue-500"/>
                 Follow us
               </h4>
@@ -162,7 +162,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  <FaLinkedin className="text-4xl" />
+                  <FaLinkedin className="text-3xl" />
                 </a>
                 <a
                   href="https://wa.me/your-phone-number"
@@ -170,7 +170,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="text-green-600 hover:text-green-800"
                 >
-                  <FaWhatsapp className="text-4xl" />
+                  <FaWhatsapp className="text-3xl" />
                 </a>
               </div>
             </div>
