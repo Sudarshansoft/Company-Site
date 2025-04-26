@@ -39,7 +39,15 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-blue-500 mb-5">SOLID</h3>
+            <div className="mb-5">
+              <Image
+                src="/images/logo/WhiteLogoWithName.svg"
+                alt="Solid Logo"
+                width={160}
+                height={50}
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 text-lg mb-6 leading-relaxed">
               We’re a passionate team delivering innovative digital solutions tailored to your business needs.
             </p>
@@ -91,6 +99,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-300 text-base">
               {[
                 { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
                 { label: "Projects", href: "/projects" },
                 { label: "About Us", href: "/about" },
               ].map((item, idx) => (
