@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { FaLocationArrow, FaPhoneAlt, FaEnvelope, FaLinkedin, FaWhatsapp, FaUserPlus } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Contact = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
@@ -11,7 +11,7 @@ const Contact = () => {
   }, []);
   if (!hasMounted) {
     return null;
-  }
+  } 
 
   return (
     <section id="support" className="px-4 md:px-8 2xl:px-0">
@@ -107,74 +107,96 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: -20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 2, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
-          >
-            <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-              Find us
-            </h2>
+{/* Contact Information Section */}
+<motion.div
+  variants={{
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 1.5, delay: 0.1 }}
+  viewport={{ once: true }}
+  className="w-full md:w-2/5 md:p-8 lg:w-[26%] xl:pt-20"
+>
+  <h2 className="mb-10 text-4xl font-bold text-gray-900 dark:text-white">
+    Contact Information
+  </h2>
 
-            <div className="mb-7">
-              <h3 className="mb-3 text-xl font-medium text-black dark:text-white">
-                <FaLocationArrow className="inline mr-3 text-blue-500" />
-                Our Location
-              </h3>
-              <p>316, Green Plaza, Mota Varachha, Surat, Gujarat - 394101</p>
-            </div>
+  <div className="space-y-8">
+    <div className="flex items-start gap-4">
+      <FaMapMarkerAlt className="text-3xl text-blue-600" />
+      <div>
+        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
+        <p className="text-gray-600 dark:text-gray-300">
+          316, Green Plaza, Mota Varachha,<br />Surat, Gujarat - 394101
+        </p>
+      </div>
+    </div>
 
-            <div className="mb-7">
-              <h3 className="mb-3 text-xl font-medium text-black dark:text-white">
-                <FaEnvelope className="inline mr-3 text-blue-500" />
-                Email Address
-              </h3>
-              <p>
-                <a href="mailto:futureforge9188@gmail.com">futureforge9188@gmail.com</a>
-              </p>
-            </div>
+    <div className="flex items-start gap-4">
+      <FaEnvelope className="text-3xl text-blue-600" />
+      <div>
+        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
+        <p className="text-gray-600 dark:text-gray-300">
+          <a href="mailto:futureforge9188@gmail.com">futureforge9188@gmail.com</a>
+        </p>
+      </div>
+    </div>
 
-            <div>
-              <h4 className="mb-3 text-xl font-medium text-black dark:text-white">
-                <FaPhoneAlt className="inline mr-3 text-blue-500" />
-                Phone Number
-              </h4>
-              <p>
-                <a href="tel:+00942334634843">+009 42334 6343 843</a>
-              </p>
-            </div>
+    <div className="flex items-start gap-4">
+      <FaPhoneAlt className="text-3xl text-blue-600" />
+      <div>
+        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
+        <p className="text-gray-600 dark:text-gray-300">
+          <a href="tel:+00942334634843">+009 42334 6343 843</a>
+        </p>
+      </div>
+    </div>
+  </div>
 
-            <div className="mt-7">
-              <h4 className="mb-4 text-xl font-medium text-black dark:text-white">
-                <FaUserPlus className="text-3xl inline mr-3 text-blue-500"/>
-                Follow us
-              </h4>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaLinkedin className="text-3xl" />
-                </a>
-                <a
-                  href="https://wa.me/your-phone-number"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-800"
-                >
-                  <FaWhatsapp className="text-3xl" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
+  {/* Social Media Links */}
+  <div className="mt-10">
+    <h4 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
+      Connect With Us
+    </h4>
+    <div className="flex gap-5">
+      <a
+        href="https://www.linkedin.com/in/your-profile"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-700 hover:text-blue-900 transition"
+      >
+        <FaLinkedin className="text-3xl" />
+      </a>
+      <a
+        href="https://wa.me/your-phone-number"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-green-500 hover:text-green-700 transition"
+      >
+        <FaWhatsapp className="text-3xl" />
+      </a>
+      <a
+        href="https://www.instagram.com/your-profile"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-pink-500 hover:text-pink-700 transition"
+      >
+        <FaInstagram className="text-3xl" />
+      </a>
+      <a
+        href="https://www.facebook.com/your-page"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:text-blue-800 transition"
+      >
+        <FaFacebook className="text-3xl" />
+      </a>
+    </div>
+  </div>
+</motion.div>
+
         </div>
       </div>
     </section>
