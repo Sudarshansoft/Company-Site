@@ -11,7 +11,6 @@ const navItems = [
   { title: "Services", path: "/services" },
   { title: "Projects", path: "/projects" },
   { title: "About Us", path: "/about" },
-  { title: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
