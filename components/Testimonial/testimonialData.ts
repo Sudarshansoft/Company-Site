@@ -1,38 +1,40 @@
-import image1 from "@/public/images/user/user-01.png";
-import image2 from "@/public/images/user/user-02.png";
+import image1 from "@/public/images/user/Kaushik_patel.jpeg";
+import image2 from "@/public/images/user/Devin_tejani.jpeg";
+import image3 from "@/public/images/user/Rechard_lenol.jpeg";
+import image4 from "@/public/images/user/George_macias.jpg";
 import { Testimonial } from "@/types/testimonial";
 
 export const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "David Smith",
-    designation: "Founder @DemoCompany",
+    name: "Kaushik Patel",
+    designation: "CEO & Founder @RRocks Thread",
     image: image1,
     content:
-      "Working with this team was a fantastic experience. They delivered our product on time, with top-notch quality and great communication throughout.",
+      "Working with Sudarshan Soft was a great experience. He understood our ERP system requirements clearly and helped us create a solution that made our billing and business management much more efficient. Highly recommended!",
   },
   {
     id: 2,
-    name: "John Abraham",
-    designation: "Founder @DemoCompany",
+    name: "Devin Tejani",
+    designation: "CEO @Plantpact Innovations PVT LTD",
     image: image2,
     content:
-      "Their attention to detail and ability to adapt to our evolving needs was impressive. Highly recommended for any serious business.",
+      "Working with Sudarshan Soft was a seamless and inspiring experience. They understood our vision for GreenSkin and brought it to life with a modern, responsive website that truly reflects our brand's commitment to sustainability.",
   },
   {
     id: 3,
-    name: "Emma Johnson",
-    designation: "CTO @TechNova",
-    image: image1,
+    name: "Richard Lenol",
+    designation: "IT Consultant",
+    image: image3,
     content:
-      "From planning to execution, they exceeded every expectation. Their development process is seamless and transparent.",
+      "From planning to execution, the team exceeded all our expectations. Their process was seamless, transparent, and highly efficient. They fulfilled all our requirements perfectly. We highly recommend their services.",
   },
   {
     id: 4,
-    name: "Michael Lee",
-    designation: "Product Manager @InnoSoft",
-    image: image2,
+    name: "George Macias",
+    designation: "CEO @MDI",
+    image: image4,
     content:
-      "We’ve worked with multiple teams before, but this was the most professional and satisfying experience. We'll definitely collaborate again.",
+      "We had a wonderful experience working with Sudarshan Soft. They understood our needs perfectly and delivered a high-quality, user-friendly solution on time. We're very happy with their excellent service and ongoing support.",
   },
 ];

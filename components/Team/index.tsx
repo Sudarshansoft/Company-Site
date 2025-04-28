@@ -6,7 +6,7 @@ const teamMembers = [
     {
         name: "Bryan Wiener",
         title: "Executive Chairman",
-        image: "/images/team/team.jfif",
+        image: "/images/team/nishil_photo.jpg",
         bio: "Bryan is the Executive Chairman at the company with extensive experience in leadership..."
     },
     {
