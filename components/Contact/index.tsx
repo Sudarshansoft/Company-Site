@@ -139,7 +139,7 @@ const Contact = () => {
       <div>
         <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
         <p className="text-gray-600 dark:text-gray-300">
-          <a href="mailto:futureforge9188@gmail.com">futureforge9188@gmail.com</a>
+          <a href="mailto:Sudarshansoftsolutions@gmail.com">Sudarshansoftsolutions@gmail.com</a>
         </p>
       </div>
     </div>
