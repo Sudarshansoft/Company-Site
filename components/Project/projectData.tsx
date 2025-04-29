@@ -53,7 +53,7 @@ const ProjectData: Project[] = [
     category: ProjectCategory.WebApp,
     technologies: [Technology.React, Technology.Node, Technology.Express, Technology.MongoDB, Technology.AntDesign],
     description: `A full-featured ERP and CRM system with powerful invoice and quote management functionalities, built on the robust MERN stack.`,
-    bannerImage: "/images/projects/invoice-erp-crm/main-page.png",
+    bannerImage: "/images/projects/invoice-erp-crm/banner.jfif",
     details: [
       "Invoice ERP-CRM is a comprehensive business management platform designed for small to medium-sized enterprises. Built with the MERN stack and Ant Design, it provides intuitive tools to manage invoices, payments, quotes, and customer information effectively. The system ensures streamlined financial operations by enabling users to generate and track invoices, manage payments, and handle customer interactions from a centralized platform. With a focus on clean UI/UX, it offers an easy-to-use dashboard for seamless business workflow management.",
       "It is optimized for scalability, performance, and a responsive experience across devices, empowering businesses to maintain better financial control and customer relationships.",
@@ -76,10 +76,14 @@ const ProjectData: Project[] = [
       },
       {
         id: 3,
-        src: "/images/projects/invoice-erp-crm/client-page.png",
+        src: "/images/projects/invoice-erp-crm/main-page.png",
       },
       {
         id: 4,
+        src: "/images/projects/invoice-erp-crm/client-page.png",
+      },
+      {
+        id: 5,
         src: "/images/projects/invoice-erp-crm/setting-page.png",
       }
     ],
@@ -165,7 +169,7 @@ const ProjectData: Project[] = [
             a sophisticated dashboard interface for security personnel, healthcare professionals, 
             or administrators to monitor and respond to potentially aggressive situations in various 
             environments like healthcare facilities, public spaces, or educational institutions.`,
-    bannerImage: "/images/projects/behaviour-detection/dash-1.png",
+    bannerImage: "/images/projects/behaviour-detection/banner.jfif",
     details: [
       `The Behavior Analysis Model is designed to detect aggressive actions in real-time from video footage. 
         The primary goal of this project is to enhance security and safety by identifying violent behaviors such as 
@@ -201,70 +205,70 @@ const ProjectData: Project[] = [
       },
     ],
     testimonials: [],
-  },
-  {
-    _id: 5,
-    title: "TwitBuzz",
-    category: ProjectCategory.WebApp,
-    technologies: [
-      Technology.Js,
-      Technology.Bootstrap,
-      Technology.React,
-      Technology.Node,
-      Technology.Express,
-      Technology.MongoDB,
-    ],
-    description: "This is description",
-    bannerImage: "/images/blog/blog-01.png",
-    details: [
-      `TwitBuzz is a modern social media platform inspired by Twitter, built using the powerful MERN stack. It offers users a seamless experience to connect,
-        share, and engage in real time.With features like creating and sharing posts, following users,
-        liking and commenting on content, and exploring trending topics, TwitBuzz provides a dynamic and 
-  interactive environment.Users can personalize their feeds by following others, stay updated 
-  on the latest trends, and engage in meaningful conversations through likes and comments.`,
-      `The platform is designed with a responsive and intuitive interface, ensuring an optimized experience
-  across both desktop and mobile devices. TwitBuzz also incorporates real-time updates, making
-  interactions fast and engaging. Built for scalability and performance, it combines robust backend
-  functionality with a visually appealing and user-friendly frontend. Whether you're a casual browser
-   or an active content creator, TwitBuzz offers a fresh and exciting take on social networking,
-   bringing people closer and fostering meaningful connections.`,
-    ],
-    keyObjectives: [
-      "Build a scalable social media platform using the MERN stack.",
-      "Implement core features like posts, likes, comments, and following system.",
-      "Ensure responsive design across all devices.",
-      "Integrate real-time updates for a dynamic user experience.",
-      "Focus on usability, performance, and clean UI/UX design.",
-    ],
-    demoLink: "",
-    images: [
-      {
-        id: 1,
-        src: "/images/blog/blog-01.png",
-      },
-      {
-        id: 2,
-        src: "/images/blog/blog-02.png",
-      },
-      {
-        id: 3,
-        src: "/images/blog/blog-03.png",
-      },
-    ],
-    testimonials: [
-      {
-        name: "John Doe",
-        position: "CEO, ExampleCorp",
-        feedback:
-          "Working with this team was a fantastic experience. The project was delivered on time with exceptional quality.",
-      },
-      {
-        name: "Jane Smith",
-        position: "CTO, TechNova",
-        feedback:
-          "Professional, efficient, and highly skilled—couldn’t ask for more.",
-      },
-    ],
+  // },
+  // {
+  //   _id: 5,
+  //   title: "TwitBuzz",
+  //   category: ProjectCategory.WebApp,
+  //   technologies: [
+  //     Technology.Js,
+  //     Technology.Bootstrap,
+  //     Technology.React,
+  //     Technology.Node,
+  //     Technology.Express,
+  //     Technology.MongoDB,
+  //   ],
+  //   description: "This is description",
+  //   bannerImage: "/images/blog/blog-01.png",
+  //   details: [
+  //     `TwitBuzz is a modern social media platform inspired by Twitter, built using the powerful MERN stack. It offers users a seamless experience to connect,
+  //       share, and engage in real time.With features like creating and sharing posts, following users,
+  //       liking and commenting on content, and exploring trending topics, TwitBuzz provides a dynamic and 
+  // interactive environment.Users can personalize their feeds by following others, stay updated 
+  // on the latest trends, and engage in meaningful conversations through likes and comments.`,
+  //     `The platform is designed with a responsive and intuitive interface, ensuring an optimized experience
+  // across both desktop and mobile devices. TwitBuzz also incorporates real-time updates, making
+  // interactions fast and engaging. Built for scalability and performance, it combines robust backend
+  // functionality with a visually appealing and user-friendly frontend. Whether you're a casual browser
+  //  or an active content creator, TwitBuzz offers a fresh and exciting take on social networking,
+  //  bringing people closer and fostering meaningful connections.`,
+  //   ],
+  //   keyObjectives: [
+  //     "Build a scalable social media platform using the MERN stack.",
+  //     "Implement core features like posts, likes, comments, and following system.",
+  //     "Ensure responsive design across all devices.",
+  //     "Integrate real-time updates for a dynamic user experience.",
+  //     "Focus on usability, performance, and clean UI/UX design.",
+  //   ],
+  //   demoLink: "",
+  //   images: [
+  //     {
+  //       id: 1,
+  //       src: "/images/blog/blog-01.png",
+  //     },
+  //     {
+  //       id: 2,
+  //       src: "/images/blog/blog-02.png",
+  //     },
+  //     {
+  //       id: 3,
+  //       src: "/images/blog/blog-03.png",
+  //     },
+  //   ],
+  //   testimonials: [
+  //     {
+  //       name: "John Doe",
+  //       position: "CEO, ExampleCorp",
+  //       feedback:
+  //         "Working with this team was a fantastic experience. The project was delivered on time with exceptional quality.",
+  //     },
+  //     {
+  //       name: "Jane Smith",
+  //       position: "CTO, TechNova",
+  //       feedback:
+  //         "Professional, efficient, and highly skilled—couldn’t ask for more.",
+  //     },
+  //   ],
   },
 ];
 

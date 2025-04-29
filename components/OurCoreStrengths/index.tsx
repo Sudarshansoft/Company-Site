@@ -14,7 +14,7 @@ const features = [
     icon: "/images/brand/speed.png",
   },
   {
-    title: "Custom Support",
+    title: "Customer Support",
     icon: "/images/brand/support.png",
   },
   {
