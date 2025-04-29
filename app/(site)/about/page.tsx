@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import TeamPage from "@/components/Team";
 import { UserCheck, Clock, Folder } from "lucide-react";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import OurProcess from "@/components/OurProcess";
 
 const Counter = ({ end, suffix = "" }) => {
   const [count, setCount] = useState(0);
@@ -65,21 +67,21 @@ export default function AboutCompany() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="min-w-0 rounded-xl border bg-white p-4 text-center shadow-md">
                 <UserCheck className="mx-auto mb-2 text-blue-500" size={24} />
-                <Counter end={85} suffix="+" />
+                <Counter end={36} suffix="+" />
                 <p className="break-words text-sm text-gray-700">
                   Happy Clients
                 </p>
               </div>
               <div className="min-w-0 rounded-xl border bg-white p-4 text-center shadow-md">
                 <Clock className="mx-auto mb-2 text-blue-500" size={24} />
-                <Counter end={95000} suffix="+" />
+                <Counter end={12000} suffix="+" />
                 <p className="break-words text-sm text-gray-700">
                   Hours Worked
                 </p>
               </div>
               <div className="min-w-0 rounded-xl border bg-white p-4 text-center shadow-md">
                 <Folder className="mx-auto mb-2 text-blue-500" size={24} />
-                <Counter end={145} suffix="+" />
+                <Counter end={142} suffix="+" />
                 <p className="break-words text-sm text-gray-700">
                   Projects Done
                 </p>
@@ -88,6 +90,8 @@ export default function AboutCompany() {
           </div>
         </div>
       </div>
+      <WhyChooseUs />
+      <OurProcess />
       <div className="-mt-16">
         <TeamPage />
       </div>

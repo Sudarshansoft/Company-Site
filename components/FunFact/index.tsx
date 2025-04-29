@@ -7,9 +7,9 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { value: 100, suffix: "+", label: "World Wide Clients", animate: true },
-  { value: 250, suffix: "+", label: "Successful Projects", animate: true },
-  { value: 20, suffix: "+", label: "Countries Served", animate: true },
+  { value: 36, suffix: "+", label: "World Wide Clients", animate: true },
+  { value: 142, suffix: "+", label: "Successful Projects", animate: true },
+  { value: 10, suffix: "+", label: "Countries Served", animate: true },
   { value: "24/7", suffix: "", label: "Support Available", animate: false },
 ];
 
