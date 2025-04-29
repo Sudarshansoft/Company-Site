@@ -9,7 +9,7 @@ import { FiSend } from "react-icons/fi";
 const contactItems = [
   {
     label: "Email",
-    value: "futureforge9188@gmail.com",
+    value: "Sudarshansoftsolutions@gmail.com",
     icon: "/images/icon/email.svg",
   },
   {
@@ -34,7 +34,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   const handleEmailSubmit = () => {
-    const mailtoLink = `mailto:futureforge9188@gmail.com?subject=New Inquiry&body=User Email: ${email}`;
+    const mailtoLink = `mailto:Sudarshansoftsolutions@gmail.com?subject=New Inquiry&body=User Email: ${email}`;
     window.location.href = mailtoLink;
   };
 
@@ -181,7 +181,7 @@ const Footer = () => {
 
       <div className="border-t border-[#1f273e] bg-[#0b0f1a] px-4 py-6 text-center text-sm text-gray-500">
         &copy; 2025{" "}
-        <span className="font-semibold text-white">FutureForge</span>. All
+        <span className="font-semibold text-white">SudarshanSoft</span>. All
         rights reserved.
       </div>
     </footer>
