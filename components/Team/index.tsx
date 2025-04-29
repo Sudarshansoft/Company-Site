@@ -4,34 +4,34 @@ import CustomModal from "../CustomModal";
 
 const teamMembers = [
     {
-        name: "Bryan Wiener",
-        title: "Executive Chairman",
-        image: "/images/team/nishil_photo.jpg",
-        bio: "Bryan is the Executive Chairman at the company with extensive experience in leadership..."
+        name: "Nishil Tejani",
+        title: "COO & Co-Founder",
+        image: "/images/team/Nishil_photo.JPG",
+        bio: "At Sudarshansoft, innovation, passion, and a commitment to excellence drive everything they do. As COO and Co-founder, Nishil takes pride in leading a dynamic team focused on delivering future-ready IT solutions. Our mission is to empower businesses through technology that drives growth and transformation. We believe in building trusted partnerships and creating real value for their clients."
     },
     {
-        name: "Sarah Hofstetter",
-        title: "Chief Executive Officer",
-        image: "/images/team/team.jfif",
-        bio: "Sarah leads the company as the CEO with a vision for innovation and growth."
+        name: "Kashyap Rajodiya",
+        title: "CEO & Founder",
+        image: "/images/team/Kashyap Rajodiya.jpeg",
+        bio: "Kashyap Rajodiya is the Founder and CEO at SudarshanSoft. Over 5 years of experience, he is known to be instrumental, visionary and holds the sole responsibility of nurturing high performing businesses and future technology strategies. His leadership blends technical expertise with a deep commitment to client success."
     },
     {
-        name: "Jared Belsky",
-        title: "President",
-        image: "/images/team/team.jfif",
-        bio: "Jared is the President and oversees business operations."
+        name: "Jenil Kukadiya",
+        title: "VP & Co-Founder",
+        image: "/images/team/Jenil Kukadiya.jpeg",
+        bio: "Jenil Kukadiya is the Vice President of Engineering and Co-Founder at Sudarshan Soft. With a strong focus on innovation and technical excellence, he leads the engineering vision and strategy while empowering teams to build scalable, high-impact software solutions. His leadership ensures that technology and business objectives move forward in perfect sync."
     },
     {
-        name: "Pierre Lipton",
-        title: "Chief Creative Officer",
-        image: "/images/team/team.jfif",
-        bio: "Pierre is the CCO, known for his creative leadership in global campaigns."
+        name: "Krunal Vaghasiya",
+        title: "Director",
+        image: "/images/team/Krunal Vaghasiya.jpeg",
+        bio: "Krunal Vaghasiya is the Director of the US region at SudarshanSoft. With a solid background in technology and business, he leads the company’s operations across the globe, ensuring innovative and client-focused solutions across various industries."
     },
     {
-        name: "Jane Doe",
-        title: "Head of Marketing",
-        image: "/images/team/team.jfif",
-        bio: "Jane heads the marketing department and is a branding expert."
+        name: "Jenis Donda",
+        title: "CTO & Co-Founder",
+        image: "/images/team/Jenis Donda.jpeg",
+        bio: "At Sudarshansoft, our CTO Jenis Donda transforms visionary thinking into powerful technology. With a passion for innovation and hands-on leadership, He drives our tech vision, builds cutting-edge solutions, and ensures we stay ahead of the curve. He leads our engineering teams with creativity and precision, always pushing boundaries to deliver smarter, faster, and more impactful products."
     },
 ];
 
