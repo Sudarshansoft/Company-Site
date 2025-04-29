@@ -5,7 +5,6 @@ import Feature from "@/components/Features";
 import OurProcess from "@/components/OurProcess";
 import FeaturesTab from "@/components/FeaturesTab";
 import WhyChooseUs from "@/components/WhyChooseUs";
-console.log("WhyChooseUs component:", WhyChooseUs);
 import FunFact from "@/components/FunFact";
 import OurCoreStrengths from "@/components/OurCoreStrengths";
 import CTA from "@/components/CTA";
@@ -16,9 +15,7 @@ import Project from "@/components/Project";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-
-  // other metadata
+  title: "Sudarshansoft Solutions",
   description: "This is Home for Solid Pro"
 };
 
