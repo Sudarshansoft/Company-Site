@@ -36,7 +36,12 @@ const teamMembers = [
 ];
 
 export default function TeamPage() {
-    const [selectedMember, setSelectedMember] = useState(null);
+    const [selectedMember, setSelectedMember] = useState<{
+        name: string;
+        title: string;
+        image: string;
+        bio: string;
+    } | null>(null);
 
     useEffect(() => {
         if (selectedMember) {
