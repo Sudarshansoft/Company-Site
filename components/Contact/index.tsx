@@ -3,15 +3,48 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
+// Change 1: Import EmailJS
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
+
+  // Change 2: Initialize EmailJS without dynamic script loading
   React.useEffect(() => {
     setHasMounted(true);
+    // Initialize EmailJS with your public key
+    emailjs.init("wQ0oqKaFeaORrcv4N"); // Replace with your EmailJS public key
   }, []);
+
   if (!hasMounted) {
     return null;
-  } 
+  }
+
+  // Handle form submission (unchanged)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = {
+      fullName: e.target[0].value, // Full name
+      email: e.target[1].value,    // Email address
+      subject: e.target[2].value,  // Subject
+      phone: e.target[3].value,    // Phone number
+      message: e.target[4].value,  // Message
+    };
+
+    emailjs
+      .send("service_6wqmw9q", "template_obl3x5d", formData) // Replace with your EmailJS service ID and template ID
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          e.target.reset(); // Reset the form after successful submission
+        },
+        (error) => {
+          alert("Failed to send message. Please try again.");
+          console.error("EmailJS error:", error);
+        }
+      );
+  };
 
   return (
     <section id="support" className="px-4 md:px-8 2xl:px-0">
@@ -22,14 +55,8 @@ const Contact = () => {
         <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
           <motion.div
             variants={{
-              hidden: {
-                opacity: 0,
-                y: -20,
-              },
-              visible: {
-                opacity: 1,
-                y: 0,
-              },
+              hidden: { opacity: 0, y: -20 },
+              visible: { opacity: 1, y: 0 },
             }}
             initial="hidden"
             whileInView="visible"
@@ -41,17 +68,19 @@ const Contact = () => {
               Send a message
             </h2>
 
-            <form action="https://formbold.com/s/unique_form_id" method="POST">
+            <form onSubmit={handleSubmit}>
               <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
                   placeholder="Full name"
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-blue-500 focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  required
                 />
                 <input
                   type="email"
                   placeholder="Email address"
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-blue-500 focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  required
                 />
               </div>
 
@@ -60,6 +89,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Subject"
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-blue-500 focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  required
                 />
                 <input
                   type="text"
@@ -73,11 +103,13 @@ const Contact = () => {
                   placeholder="Message"
                   rows={4}
                   className="w-full border-b border-stroke bg-transparent focus:border-blue-500 focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                  required
                 ></textarea>
               </div>
 
               <div className="flex flex-wrap gap-4 xl:justify-end">
                 <button
+                  type="submit"
                   aria-label="send message"
                   className="inline-flex items-center gap-2.5 rounded-full bg-blue-500 px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 relative"
                 >
@@ -96,107 +128,104 @@ const Contact = () => {
                     />
                   </svg>
                   <style jsx>{`
-    button:hover svg {
-      transform: translateX(8px); /* Move arrow to the right */
-    }
-  `}</style>
+                    button:hover svg {
+                      transform: translateX(8px);
+                    }
+                  `}</style>
                 </button>
-
               </div>
             </form>
           </motion.div>
 
-          {/* Contact Info */}
-{/* Contact Information Section */}
-<motion.div
-  variants={{
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  initial="hidden"
-  whileInView="visible"
-  transition={{ duration: 1.5, delay: 0.1 }}
-  viewport={{ once: true }}
-  className="w-full md:w-2/5 md:p-8 lg:w-[26%] xl:pt-20"
->
-  <h2 className="mb-10 text-4xl font-bold text-gray-900 dark:text-white">
-    Contact Information
-  </h2>
+          {/* Contact Information Section */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: -20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="w-full md:w-2/5 md:p-8 lg:w-[26%] xl:pt-20"
+          >
+            <h2 className="mb-10 text-4xl font-bold text-gray-900 dark:text-white">
+              Contact Information
+            </h2>
 
-  <div className="space-y-8">
-    <div className="flex items-start gap-4">
-      <FaMapMarkerAlt className="text-3xl text-blue-600" />
-      <div>
-        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
-        <p className="text-gray-600 dark:text-gray-300">
-          316, Green Plaza, Mota Varachha,<br />Surat, Gujarat - 394101
-        </p>
-      </div>
-    </div>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <FaMapMarkerAlt className="text-3xl text-blue-600" />
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    316, Green Plaza, Mota Varachha,<br />Surat, Gujarat - 394101
+                  </p>
+                </div>
+              </div>
 
-    <div className="flex items-start gap-4">
-      <FaEnvelope className="text-3xl text-blue-600" />
-      <div>
-        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
-        <p className="text-gray-600 dark:text-gray-300">
-          <a href="mailto:info@sudarshansoft.com">info@sudarshansoft.com</a>
-        </p>
-      </div>
-    </div>
+              <div className="flex items-start gap-4">
+                <FaEnvelope className="text-3xl text-blue-600" />
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    <a href="mailto:info@sudarshansoft.com">info@sudarshansoft.com</a>
+                  </p>
+                </div>
+              </div>
 
-    <div className="flex items-start gap-4">
-      <FaPhoneAlt className="text-3xl text-blue-600" />
-      <div>
-        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
-        <p className="text-gray-600 dark:text-gray-300">
-          <a href="tel:+00942334634843">+1 (857) 421-9551</a>
-        </p>
-      </div>
-    </div>
-  </div>
+              <div className="flex items-start gap-4">
+                <FaPhoneAlt className="text-3xl text-blue-600" />
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    <a href="tel:+00942334634843">+1 (857) 421-9551</a>
+                  </p>
+                </div>
+              </div>
+            </div>
 
-  {/* Social Media Links */}
-  <div className="mt-10">
-    <h4 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
-      Connect With Us
-    </h4>
-    <div className="flex gap-5">
-      <a
-        href="https://www.linkedin.com/in/your-profile"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-700 hover:text-blue-900 transition"
-      >
-        <FaLinkedin className="text-3xl" />
-      </a>
-      <a
-        href="https://wa.me/your-phone-number"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-green-500 hover:text-green-700 transition"
-      >
-        <FaWhatsapp className="text-3xl" />
-      </a>
-      <a
-        href="https://www.instagram.com/your-profile"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-pink-500 hover:text-pink-700 transition"
-      >
-        <FaInstagram className="text-3xl" />
-      </a>
-      <a
-        href="https://www.facebook.com/your-page"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600 hover:text-blue-800 transition"
-      >
-        <FaFacebook className="text-3xl" />
-      </a>
-    </div>
-  </div>
-</motion.div>
-
+            {/* Social Media Links */}
+            <div className="mt-10">
+              <h4 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
+                Connect With Us
+              </h4>
+              <div className="flex gap-5">
+                <a
+                  href="https://www.linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 hover:text-blue-900 transition"
+                >
+                  <FaLinkedin className="text-3xl" />
+                </a>
+                <a
+                  href="https://wa.me/your-phone-number"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 hover:text-green-700 transition"
+                >
+                  <FaWhatsapp className="text-3xl" />
+                </a>
+                <a
+                  href="https://www.instagram.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition"
+                >
+                  <FaInstagram className="text-3xl" />
+                </a>
+                <a
+                  href="https://www.facebook.com/your-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 transition"
+                >
+                  <FaFacebook className="text-3xl" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
