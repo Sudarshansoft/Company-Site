@@ -139,7 +139,7 @@ const Contact = () => {
       <div>
         <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
         <p className="text-gray-600 dark:text-gray-300">
-          <a href="mailto:Sudarshansoftsolutions@gmail.com">Sudarshansoftsolutions@gmail.com</a>
+          <a href="mailto:info@sudarshansoft.com">info@sudarshansoft.com</a>
         </p>
       </div>
     </div>
@@ -149,7 +149,7 @@ const Contact = () => {
       <div>
         <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
         <p className="text-gray-600 dark:text-gray-300">
-          <a href="tel:+00942334634843">+009 42334 6343 843</a>
+          <a href="tel:+00942334634843">+1 (857) 421-9551</a>
         </p>
       </div>
     </div>

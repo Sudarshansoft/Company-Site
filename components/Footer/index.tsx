@@ -9,12 +9,12 @@ import { FiSend } from "react-icons/fi";
 const contactItems = [
   {
     label: "Email",
-    value: "Sudarshansoftsolutions@gmail.com",
+    value: "info@sudarshansoft.com",
     icon: "/images/icon/email.svg",
   },
   {
     label: "Phone",
-    value: "+009 42334 6343 843",
+    value: "+1 (857) 421-9551",
     icon: "/images/icon/phone.svg",
   },
   {
@@ -34,7 +34,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   const handleEmailSubmit = () => {
-    const mailtoLink = `mailto:Sudarshansoftsolutions@gmail.com?subject=New Inquiry&body=User Email: ${email}`;
+    const mailtoLink = `mailto:info@sudarshansoft.com?subject=New Inquiry&body=User Email: ${email}`;
     window.location.href = mailtoLink;
   };
 
