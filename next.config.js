@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
   reactStrictMode: true,
+
+  // Disable image optimization for Netlify compatibility
   images: {
-    domains: ["localhost"],
+    unoptimized: true,
+
+    // Optional: You can still leave remotePatterns in case you move to Vercel or use <img />
     remotePatterns: [
       {
         protocol: "https",
@@ -11,6 +14,7 @@ const nextConfig = {
         port: "",
       },
     ],
+    domains: ["localhost"], // kept for local dev
   },
 };
 
