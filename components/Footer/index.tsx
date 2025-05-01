@@ -21,9 +21,9 @@ const contactItems = [
     label: "Address",
     value: (
       <>
-        316, Green Plaza, Golden Chowk,
+        16 Lakeville Rd
         <br />
-        Mota Varachha, Surat, Gujarat - 394101
+        Jamaica Plain, MA 02130, United States
       </>
     ),
     icon: "/images/icon/location.svg",

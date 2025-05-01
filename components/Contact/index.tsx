@@ -159,7 +159,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    316, Green Plaza, Mota Varachha,<br />Surat, Gujarat - 394101
+                  16 Lakeville Rd,<br />Jamaica Plain, MA 02130, United States
                   </p>
                 </div>
               </div>
