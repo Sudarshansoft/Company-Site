@@ -12,8 +12,12 @@ const Contact = () => {
   // Change 2: Initialize EmailJS without dynamic script loading
   React.useEffect(() => {
     setHasMounted(true);
-    // Initialize EmailJS with your public key
-    emailjs.init("wQ0oqKaFeaORrcv4N"); // Replace with your EmailJS public key
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey); // Initialize only if public key is available
+    } else {
+      console.error('EmailJS Public Key is not defined');
+    } // Replace with your EmailJS public key
   }, []);
 
   if (!hasMounted) {
@@ -32,8 +36,17 @@ const Contact = () => {
       message: e.target[4].value,  // Message
     };
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+
+    if (!serviceId || !templateId) {
+      alert('EmailJS configuration is missing. Please contact support.');
+      console.error('Service ID or Template ID is undefined:', { serviceId, templateId });
+      return;
+    }
+
     emailjs
-      .send("service_6wqmw9q", "template_obl3x5d", formData) // Replace with your EmailJS service ID and template ID
+      .send(serviceId, templateId, formData) // Replace with your EmailJS service ID and template ID
       .then(
         (result) => {
           alert("Message sent successfully!");
