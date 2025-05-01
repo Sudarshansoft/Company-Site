@@ -36,15 +36,15 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center h-[72px]">
           <Image
-            src="/images/logo/BlackLogoWithoutName1.svg"
+            src="/images/logo/SUDARSHANSOFTLight.png"
             alt="Logo"
             width={200}
-            height={60}
+            height={100}
             className="block dark:hidden object-contain max-h-[60px] w-auto"
             priority
           />
           <Image
-            src="/images/logo/BlackLogoWithoutName1.svg"
+            src="/images/logo/SUDARSHANSOFTLight.png"
             alt="Logo"
             width={200}
             height={60}

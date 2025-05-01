@@ -15,8 +15,8 @@ import Project from "@/components/Project";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Sudarshansoft Solutions",
-  description: "This is Home for Solid Pro"
+  title: "SudarshanSoft Solutions - Innovative IT Services",
+  description: "Explore top-tier IT solutions and services from SudarshanSoft"
 };
 
 export default function Home() {
