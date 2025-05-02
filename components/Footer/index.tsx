@@ -50,7 +50,7 @@ const Footer = () => {
             className="lg:col-span-4"
           >
             <Image
-              src="/images/logo/WhiteLogoWithName.svg"
+              src="/images/logo/SUDARSHANSOFT4Dark.png"
               alt="Logo"
               width={160}
               height={50}
@@ -62,12 +62,18 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               {[
-                { src: "/images/social/linkedin.svg", alt: "LinkedIn" },
-                { src: "/images/social/instagram.svg", alt: "Instagram" },
-                { src: "/images/social/whatsapp.svg", alt: "WhatsApp" },
-                { src: "/images/social/facebook.svg", alt: "Facebook" },
+                { src: "/images/social/linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/sudarshansoft/" },
+                { src: "/images/social/instagram.svg", alt: "Instagram", href: "https://www.instagram.com/your-profile" },
+                { src: "/images/social/whatsapp.svg", alt: "WhatsApp", href: "https://wa.me/+18574219551" },
+                { src: "/images/social/facebook.svg", alt: "Facebook", href: "https://www.facebook.com/your-page" },
               ].map((icon, index) => (
-                <Link key={index} href="#" aria-label={icon.alt}>
+                <Link
+                  key={index}
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={icon.alt}
+                >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1f273e] transition-shadow hover:bg-blue-600 hover:shadow-lg">
                     <Image
                       src={icon.src}
@@ -180,7 +186,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-[#1f273e] bg-[#0b0f1a] px-4 py-6 text-center text-sm text-gray-500">
-        &copy; 2025{" "}
+        © 2025{" "}
         <span className="font-semibold text-white">SudarshanSoft</span>. All
         rights reserved.
       </div>

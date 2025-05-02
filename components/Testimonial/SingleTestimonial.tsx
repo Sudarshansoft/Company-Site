@@ -15,13 +15,16 @@ const SingleTestimonial = ({ review }: { review: Testimonial }) => {
             {designation}
           </p>
         </div>
-        <Image
-          width={60}
-          height={60}
-          src={image}
-          alt={`Photo of ${name}`}
-          className="rounded-full object-cover"
-        />
+        {/* Add a wrapper div to enforce the circular shape */}
+        <div className="h-[60px] w-[60px] overflow-hidden rounded-full">
+          <Image
+            width={60}
+            height={60}
+            src={image}
+            alt={`Photo of ${name}`}
+            className="h-full w-full object-cover"
+          />
+        </div>
       </div>
       <p className="text-gray-700 dark:text-gray-300">{content}</p>
     </div>
