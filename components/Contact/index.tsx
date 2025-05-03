@@ -74,9 +74,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="support" className="px-4 sm:px-6 md:px-8 2xl:px-0">
+    <section id="support" className="px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-0">
       <div className="relative mx-auto max-w-c-1390 px-4 sm:px-6 lg:px-15 pt-8 sm:pt-10 lg:pt-15 xl:pt-20">
-        <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
+        <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-xl bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
 
         <div className="flex flex-col-reverse flex-wrap gap-6 sm:gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
           <motion.div
@@ -88,36 +88,36 @@ const Contact = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top w-full rounded-lg bg-white p-6 sm:p-7.5 shadow-lg dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
+            className="animate_top w-full rounded-xl bg-white p-6 sm:p-8 shadow-xl dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
           >
-            <h2 className="mb-8 sm:mb-10 text-2xl sm:text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-              Send a message
+            <h2 className="mb-8 sm:mb-10 text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+              Send a Message
             </h2>
 
             <form onSubmit={handleSubmit}>
-              <div className="mb-5 sm:mb-6 flex flex-col gap-5 sm:gap-6 lg:flex-row lg:justify-between lg:gap-8">
+              <div className="mb-6 flex flex-col gap-6 lg:flex-row lg:justify-between lg:gap-8">
                 <input
                   type="text"
                   name="fullName"
-                  placeholder="Full name"
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600"
+                  placeholder="Full Name"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600 transition-all duration-300"
                   required
                 />
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email address"
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600"
+                  placeholder="Email Address"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600 transition-all duration-300"
                   required
                 />
               </div>
 
-              <div className="mb-5 sm:mb-6 flex flex-col gap-5 sm:gap-6 lg:flex-row lg:justify-between lg:gap-8">
+              <div className="mb-6 flex flex-col gap-6 lg:flex-row lg:justify-between lg:gap-8">
                 <input
                   type="text"
                   name="subject"
                   placeholder="Subject"
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600 transition-all duration-300"
                   required
                 />
                 <div className="w-full relative">
@@ -127,8 +127,8 @@ const Contact = () => {
                     onChange={setPhone}
                     inputProps={{
                       name: "phone",
-                      className: "w-full rounded-lg border border-gray-200 bg-gray-50 pl-14 pr-4 py-3 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600",
-                      placeholder: "Phone number",
+                      className: "w-full rounded-lg border border-gray-200 bg-white pl-14 pr-5 py-4 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600 transition-all duration-300",
+                      placeholder: "Phone Number",
                     }}
                     containerStyle={{ position: "relative" }}
                     buttonStyle={{
@@ -140,24 +140,52 @@ const Contact = () => {
                       left: "0",
                       top: "50%",
                       transform: "translateY(-50%)",
+                      zIndex: 10, // Ensure flag button is above input
                     }}
                     dropdownStyle={{
                       borderRadius: "8px",
-                      maxHeight: "200px",
+                      maxHeight: "250px",
                       overflowY: "auto",
                       background: "#fff",
-                      width: "100%", // Ensure dropdown width adjusts
+                      color: "#000",
+                      width: "auto",
+                      minWidth: "250px",
+                      zIndex: 50, // Ensure dropdown appears above other elements
+                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                      border: "1px solid #e5e7eb",
                     }}
+                    dropdownClass="custom-phone-dropdown" // Add custom class for additional styling if needed
                   />
+                  <style jsx global>{`
+                    .custom-phone-dropdown {
+                      margin-top: 5px;
+                    }
+                    .custom-phone-dropdown .country {
+                      padding: 8px 12px;
+                      font-size: 14px;
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                    }
+                    .custom-phone-dropdown .country:hover {
+                      background-color: #f0f0f0;
+                    }
+                    .custom-phone-dropdown .flag {
+                      margin-right: 8px;
+                    }
+                    .custom-phone-dropdown .dial-code {
+                      color: #6b7280;
+                    }
+                  `}</style>
                 </div>
               </div>
 
-              <div className="mb-5 sm:mb-6 flex">
+              <div className="mb-6 flex">
                 <textarea
                   name="message"
-                  placeholder="Message"
+                  placeholder="Your Message"
                   rows={4}
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-600 transition-all duration-300"
                   required
                 ></textarea>
               </div>
@@ -166,7 +194,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   aria-label="send message"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-blue-600 px-5 sm:px-6 py-2.5 sm:py-3 font-medium text-white shadow-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-300 ease-in-out"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-blue-600 px-5 sm:px-6 py-3 font-medium text-white shadow-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-300 ease-in-out"
                   disabled={isSubmitting}
                 >
                   Send Message
@@ -208,7 +236,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="w-full md:w-2/5 md:p-6 lg:p-8 lg:w-[26%] xl:pt-20"
           >
-            <h2 className="mb-8 sm:mb-10 text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="mb-8 sm:mb-10 text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
               Contact Information
             </h2>
 
@@ -228,7 +256,9 @@ const Contact = () => {
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">Email Us</h4>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                    <a href="mailto:info@sudarshansoft.com">info@sudarshansoft.com</a>
+                    <a href="mailto:info@sudarshansoft.com" className="hover:text-blue-500 transition-colors">
+                      info@sudarshansoft.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -238,7 +268,9 @@ const Contact = () => {
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                    <a href="tel:+00942334634843">+1 (857) 421-9551</a>
+                    <a href="tel:+18574219551" className="hover:text-blue-500 transition-colors">
+                      +1 (857) 421-9551
+                    </a>
                   </p>
                 </div>
               </div>
