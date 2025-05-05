@@ -21,9 +21,7 @@ const contactItems = [
     label: "Address",
     value: (
       <>
-        16 Lakeville Rd
-        <br />
-        Jamaica Plain, MA 02130, United States
+         Boston, MA
       </>
     ),
     icon: "/images/icon/location.svg",

@@ -246,7 +246,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                    16 Lakeville Rd,<br />Jamaica Plain, MA 02130, United States
+                    Boston, MA
                   </p>
                 </div>
               </div>
