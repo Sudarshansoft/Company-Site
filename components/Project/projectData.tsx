@@ -19,9 +19,9 @@ const ProjectData: Project[] = [
                   doctors, and admins with secure online payment integrations.`,
     bannerImage: "/images/projects/prescripto/img1.png",
     details: [
-      `"Prescripto provides a seamless platform for patients to book appointments, manage visits, and make secure online payments through Stripe or Razorpay. Patients can create personalized profiles and track appointment history easily. Doctors can manage their schedules, update profiles, view earnings, and handle appointments efficiently through a dedicated dashboard.",
+      "Prescripto provides a seamless platform for patients to book appointments, manage visits, and make secure online payments through Stripe or Razorpay. Patients can create personalized profiles and track appointment history easily. Doctors can manage their schedules, update profiles, view earnings, and handle appointments efficiently through a dedicated dashboard.",
     "Admins have complete control over managing doctors, patients, and appointments, along with access to insightful statistics via the admin panel. The application ensures data security with JWT authentication and delivers a mobile-responsive, easy-to-use interface built with the MERN stack.",
-    "Additional features include a home page with doctor search, detailed doctor profiles, payment integration, and informational pages like About, Contact, and All Doctors."`,
+    "Additional features include a home page with doctor search, detailed doctor profiles, payment integration, and informational pages like About, Contact, and All Doctors.",
     ],
     keyObjectives: [
       "Build a scalable healthcare booking system with the MERN stack.",
@@ -205,70 +205,194 @@ const ProjectData: Project[] = [
       },
     ],
     testimonials: [],
-  // },
-  // {
-  //   _id: 5,
-  //   title: "TwitBuzz",
-  //   category: ProjectCategory.WebApp,
-  //   technologies: [
-  //     Technology.Js,
-  //     Technology.Bootstrap,
-  //     Technology.React,
-  //     Technology.Node,
-  //     Technology.Express,
-  //     Technology.MongoDB,
-  //   ],
-  //   description: "This is description",
-  //   bannerImage: "/images/blog/blog-01.png",
-  //   details: [
-  //     `TwitBuzz is a modern social media platform inspired by Twitter, built using the powerful MERN stack. It offers users a seamless experience to connect,
-  //       share, and engage in real time.With features like creating and sharing posts, following users,
-  //       liking and commenting on content, and exploring trending topics, TwitBuzz provides a dynamic and 
-  // interactive environment.Users can personalize their feeds by following others, stay updated 
-  // on the latest trends, and engage in meaningful conversations through likes and comments.`,
-  //     `The platform is designed with a responsive and intuitive interface, ensuring an optimized experience
-  // across both desktop and mobile devices. TwitBuzz also incorporates real-time updates, making
-  // interactions fast and engaging. Built for scalability and performance, it combines robust backend
-  // functionality with a visually appealing and user-friendly frontend. Whether you're a casual browser
-  //  or an active content creator, TwitBuzz offers a fresh and exciting take on social networking,
-  //  bringing people closer and fostering meaningful connections.`,
-  //   ],
-  //   keyObjectives: [
-  //     "Build a scalable social media platform using the MERN stack.",
-  //     "Implement core features like posts, likes, comments, and following system.",
-  //     "Ensure responsive design across all devices.",
-  //     "Integrate real-time updates for a dynamic user experience.",
-  //     "Focus on usability, performance, and clean UI/UX design.",
-  //   ],
-  //   demoLink: "",
-  //   images: [
-  //     {
-  //       id: 1,
-  //       src: "/images/blog/blog-01.png",
-  //     },
-  //     {
-  //       id: 2,
-  //       src: "/images/blog/blog-02.png",
-  //     },
-  //     {
-  //       id: 3,
-  //       src: "/images/blog/blog-03.png",
-  //     },
-  //   ],
-  //   testimonials: [
-  //     {
-  //       name: "John Doe",
-  //       position: "CEO, ExampleCorp",
-  //       feedback:
-  //         "Working with this team was a fantastic experience. The project was delivered on time with exceptional quality.",
-  //     },
-  //     {
-  //       name: "Jane Smith",
-  //       position: "CTO, TechNova",
-  //       feedback:
-  //         "Professional, efficient, and highly skilled—couldn’t ask for more.",
-  //     },
-  //   ],
+  },
+  {
+    _id: 5,
+    title: "Cyber Sentinel",
+    category: ProjectCategory.AI,
+    technologies: [
+      Technology.LlamaIndex,
+      Technology.FAISS,
+      Technology.Streamlit,
+      Technology.OpenAI,
+      Technology.MongoDB
+    ],
+    description: "An innovative AI-powered web application designed to redefine cybersecurity through real-time threat detection and advanced risk analysis.",
+    bannerImage: "/images/projects/cyber-sentinel/main.png",
+    details: [
+      "Cyber Sentinel is an advanced AI-powered chatbot designed to deliver the latest cybersecurity-related news and updates. By utilizing cutting-edge AI technologies like GPT-4 Turbo and LlamaIndex, it provides real-time insights into the evolving landscape of cybersecurity, keeping users informed about new threats, vulnerabilities, and industry trends.",
+"The chatbot continuously gathers and analyzes the latest cybersecurity information, offering timely alerts on emerging risks such as phishing, malware, and data breaches. Whether you're an individual, small business, or large enterprise, Cyber Sentinel ensures you stay up-to-date with essential cybersecurity developments, empowering you to take proactive measures against potential threats.",
+"With its intuitive interface and smart capabilities, Cyber Sentinel makes it easy to access critical security news and stay ahead in an ever-changing digital environment."
+    ],
+    keyObjectives: [
+      "Cyber Sentinel provides real-time threat detection",
+      "Support businesses of all sizes",
+      "Adapt to evolving cyber threats with AI"
+    ],
+    demoLink: "",
+    images: [
+      {
+        id: 1,
+        src: "/images/projects/cyber-sentinel/img-1.jpg",
+      },
+      {
+        id: 2,
+        src: "/images/projects/cyber-sentinel/img-2.jpg",
+      },
+      {
+        id: 3,
+        src: "/images/projects/cyber-sentinel/img-3.jpg",
+      },
+    ],
+    testimonials: [],
+  },
+  {
+    _id: 6,
+    title: "Hotel MS",
+    category: ProjectCategory.WebApp,
+    technologies: [
+      Technology.Html,
+      Technology.Css,
+      Technology.Bootstrap,
+      Technology.ASPNET,
+      Technology.SQLServer
+    ],
+    description: "An innovative AI-powered web application designed to redefine cybersecurity through real-time threat detection and advanced risk analysis.",
+    bannerImage: "/images/projects/hotel-ms/main.jpg",
+    details: [
+      "Hotel-MS is a dynamic hotel management system built with ASP.NET, designed to streamline hotel booking and management processes. This user-friendly platform empowers hotel administrators to efficiently manage room details, availability, and rental pricing, while ensuring smooth operations for both the hotel staff and guests.",
+      "The system allows users to easily register and browse through various room categories, from standard to premium, offering flexibility to book based on their preferences. With the ability to select check-in and checkout dates, customers can seamlessly plan their stays, ensuring a personalized and hassle-free experience.",
+      "Hotel admins can effortlessly update room availability, set rental prices, and monitor bookings in real-time, while users enjoy a straightforward, intuitive interface for booking their perfect stay. Whether it's a short getaway or a long-term stay, Hotel-MS offers a complete solution for managing hotel reservations with efficiency and ease."
+    ],
+    keyObjectives: [
+      "Enable efficient room management for admins with real-time availability and pricing updates.",
+      "Provide users with a seamless, intuitive platform for browsing and booking rooms.",
+      "Ensure real-time availability updates to prevent overbooking and optimize reservations.",
+      "Enhance customer experience with a fast, personalized booking and registration process."
+    ],
+    demoLink: "",
+    images: [
+      {
+        id: 1,
+        src: "/images/projects/hotel-ms/img-1.jpg",
+      },
+      {
+        id: 2,
+        src: "/images/projects/hotel-ms/img-2.jpg",
+      },
+      {
+        id: 3,
+        src: "/images/projects/hotel-ms/img-3.jpg",
+      },
+      {
+        id: 4,
+        src: "/images/projects/hotel-ms/img-4.jpg",
+      },
+    ],
+    testimonials: [],
+  },
+  {
+    _id: 7,
+    title: "Gamerz",
+    category: ProjectCategory.WebApp,
+    technologies: [
+      Technology.Html,
+      Technology.Css,
+      Technology.Bootstrap,
+      Technology.Js,
+    ],
+    description: "An interactive gaming website that offers 8 diverse online games with seamless gameplay, built using HTML, CSS, Bootstrap, and JavaScript for an engaging and responsive user experience.",
+    bannerImage: "/images/projects/gamerz/main.jpg",
+    details: [
+      "Our project is an interactive gaming website that offers eight different online games, designed for fun and accessibility. Built using HTML, CSS, Bootstrap, and JavaScript, it ensures a responsive and seamless experience across devices. The platform allows users to easily browse and select their favorite games, offering smooth animations, responsive controls, and an engaging visual design.",
+      "The website's intuitive navigation and dynamic interactions make it easy for players to dive into the action, whether on desktop or mobile. By leveraging Bootstrap, the platform ensures an optimal gaming experience on all screen sizes, while JavaScript powers the gameplay mechanics.",
+      "This project combines creativity and technical skills, delivering a fun and browser-based gaming experience for all types of players."
+    ],
+    keyObjectives: [
+      "Provide a diverse collection of 8 online games for an engaging gaming experience.",
+      "Ensure seamless and responsive gameplay across devices using HTML, CSS, Bootstrap, and JavaScript.",
+      "Offer an intuitive and user-friendly interface for easy navigation and game selection.",
+      "Create smooth animations, responsive controls, and appealing visuals for an immersive experience."
+    ],
+    demoLink: "",
+    images: [
+      {
+        id: 1,
+        src: "/images/projects/gamerz/img-1.jpg",
+      },
+      {
+        id: 2,
+        src: "/images/projects/gamerz/img-2.jpg",
+      },
+      {
+        id: 3,
+        src: "/images/projects/gamerz/img-3.jpg",
+      },
+      {
+        id: 4,
+        src: "/images/projects/gamerz/img-4.jpg",
+      },
+      {
+        id: 5,
+        src: "/images/projects/gamerz/img-5.jpg",
+      },
+      {
+        id: 6,
+        src: "/images/projects/gamerz/img-6.jpg",
+      },
+      {
+        id: 7,
+        src: "/images/projects/gamerz/img-7.jpg",
+      },
+    ],
+    testimonials: [],
+  },
+  {
+    _id: 8,
+    title: "ResuGenius",
+    category: ProjectCategory.AI,
+    technologies: [
+      Technology.Langchain,
+      Technology.Autogen,
+      Technology.Streamlit,
+    ],
+    description: "An AI-powered platform that analyzes resumes, extracts candidate skills, and generates personalized interview questions and model answers based on job requirements.",
+    bannerImage: "/images/projects/resu-genius/main.webp",
+    details: [
+      "Resu Genius is an innovative resume analysis platform designed to streamline the hiring process by leveraging advanced AI technologies. The system allows recruiters to upload candidate resumes, job descriptions, and specify the desired number of interview questions per skill. It intelligently extracts key candidate details, including skills, experience, and relevant achievements, generating customized interview questions that reflect the candidate's background and expertise.",
+      "The platform goes beyond simple keyword matching, utilizing Autogen with AI agents to assess how well a candidate's resume aligns with the job requirements. This scoring mechanism helps recruiters quickly gauge the suitability of candidates, reducing time spent on manual screening. Resu Genius also generates model answers for each question, providing recruiters with a comprehensive understanding of the candidate’s potential responses during the interview.",
+      "With its intuitive design and powerful AI-driven capabilities, Resu Genius enhances the hiring experience by delivering accurate, data-driven insights, helping organizations identify the right talent with greater speed and precision."
+    ],
+    keyObjectives: [
+      "Automate resume analysis to extract key skills and experience.",
+      "Generate personalized interview questions based on candidate profiles.",
+      "Provide model answers for comprehensive candidate evaluation.",
+      "Score resume-job fit using AI agents for accurate candidate matching."
+    ],
+    demoLink: "",
+    images: [
+      {
+        id: 1,
+        src: "/images/projects/resu-genius/img-1.jpg",
+      },
+      {
+        id: 2,
+        src: "/images/projects/resu-genius/img-2.jpg",
+      },
+      {
+        id: 3,
+        src: "/images/projects/resu-genius/img-3.jpg",
+      },
+      {
+        id: 4,
+        src: "/images/projects/resu-genius/img-4.jpg",
+      },
+      {
+        id: 5,
+        src: "/images/projects/resu-genius/img-5.jpg",
+      }
+    ],
+    testimonials: [],
   },
 ];
 
