@@ -13,7 +13,7 @@ const teamMembers = [
         name: "Nishil Tejani",
         title: "COO & Co-Founder",
         image: "/images/team/Nishil_photo.JPG",
-        bio: "At Sudarshansoft, innovation, passion, and a commitment to excellence drive everything they do. As COO and Co-founder, Nishil takes pride in leading a dynamic team focused on delivering future-ready IT solutions. Our mission is to empower businesses through technology that drives growth and transformation. We believe in building trusted partnerships and creating real value for their clients."
+        bio: "At Sudarshansoft, innovation, passion, and a commitment to excellence drive everything they do. As COO and Co-founder, Nishil takes pride in leading a dynamic team focused on delivering future-ready IT solutions. Our mission is to empower businesses through technology that drives growth and transformation. We believe in building trusted partnerships and creating real value for our clients."
     },
     {
         name: "Jenis Donda",

@@ -144,7 +144,7 @@ const ProjectData: Project[] = [
     testimonials: [
       {
         name: "Devin Tejani",
-        position: "CEO, GreenSkin",
+        position: "CEO, Plantpact innovation",
         feedback: `Working with "Sudarshan Soft" was a seamless and inspiring experience.
                         They understood our vision for GreenSkin and brought it to life with a modern, 
                         responsive website that truly reflects our brand's commitment to sustainability. 
@@ -394,6 +394,48 @@ const ProjectData: Project[] = [
     ],
     testimonials: [],
   },
+  {
+          _id: 8,
+          title: "Trip, Slip, Fall Detection",
+          technologies: [Technology.Python, Technology.AI,Technology.DL],
+          category: ProjectCategory.computervision,
+          description: "The Trip, Slip, and Fall Detection System is a real-time safety monitoring solution designed to detect human falls using deep learning and live tracking. Developed with an LSTM-based architecture, the model analyzes temporal features from video feeds to distinguish between normal movement and fall events such as trips and slips. The system is integrated with a shared tracker to enable continuous live monitoring and localization of individuals in the frame, providing instant alerts upon fall detection. This enhances situational awareness for security or medical personnel in sensitive environments like elderly care, workplaces, and public areas.",
+          bannerImage: "/images/projects/trip-slip-fall-detection/banner-image.png",
+          details: [
+              "Developed a real-time Trip, Slip, and Fall Detection system using LSTM for temporal motion analysis. Integrated a shared tracker to continuously monitor and track individuals across video frames. The model detects abnormal motion sequences and classifies them as fall events with high accuracy. Live alerts and visual overlays are triggered instantly to enable immediate safety responses."
+          ],
+          keyObjectives: [
+              "Detect trip, slip, and fall events in real-time using LSTM-based temporal sequence analysis.",
+              "Integrate live video input with a shared tracker for continuous person tracking and location monitoring.",
+              "Trigger instant alerts upon detection of a fall to enable rapid response.",
+              "Train the model with sequential motion data to distinguish falls from regular activities.",
+              "Build a scalable solution suitable for deployment in smart surveillance systems and IoT edge devices."
+          ],
+          images:  [
+          {
+            id: 1,
+            src: "/images/projects/trip-slip-fall-detection/camera-view.png",
+          },
+          {
+            id: 2,
+            src: "/images/projects/trip-slip-fall-detection/Dashboard.png",
+          },
+          {
+            id: 3,
+            src: "/images/projects/trip-slip-fall-detection/lincident-log.png",
+          },
+          {
+            id: 4,
+            src: "/images/projects/trip-slip-fall-detection/live-monitoring.png",
+          },
+          {
+            id: 5,
+            src: "/images/projects/trip-slip-fall-detection/setting.png",
+          }
+        ],
+          demoLink: "",
+          testimonials: []
+      }
 ];
 
 export default ProjectData;

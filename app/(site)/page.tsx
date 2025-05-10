@@ -15,8 +15,8 @@ import Project from "@/components/Project";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "SudarshanSoft Solutions - Innovative IT Services",
-  description: "Explore top-tier IT solutions and services from SudarshanSoft"
+  title: "SudarshanSoft Solutions",
+  description: "Building Future-Ready Software Solutions"
 };
 
 export default function Home() {

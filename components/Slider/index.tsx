@@ -41,7 +41,7 @@ const ImgSlider = ({ images }: { images: any }) => {
           >
             {images.map((img: any) => (
               <SwiperSlide key={img.id}>
-                <div className="relative w-full h-[250px]">
+                <div className="relative w-full xl:h-[250px] sm:h-[250px] h-[150px]">
                   <Image
                     src={img.src}
                     alt="image"

@@ -52,7 +52,7 @@ const Footer = () => {
               alt="Logo"
               width={160}
               height={50}
-              className="mb-5 object-contain"
+              className="mb-9 object-contain"
             />
             <p className="mb-6 max-w-sm leading-relaxed text-gray-400">
               We craft tailored solutions to drive growth and success in the

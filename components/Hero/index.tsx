@@ -21,7 +21,7 @@ const Hero = () => {
             <h1 className="mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-hero font-extrabold text-gray-900 dark:text-white leading-tight">
               Code Your Vision into Reality
               <br className="block sm:hidden" /> {/* Break on mobile */}
-              <span className="inline-block ml-2 text-blue-600 dark:text-blue-400 min-w-[180px] sm:min-w-[220px]">
+              <span className="inline-block ml-0 text-blue-600 dark:text-blue-400 min-w-[180px] sm:min-w-[220px]">
                 <Typewriter
                   words={["Let's Innovate", "Unite Ideas", "Craft Tomorrow"]}
                   loop={true}
