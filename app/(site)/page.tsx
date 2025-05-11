@@ -13,6 +13,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Project from "@/components/Project";
 import Testimonial from "@/components/Testimonial";
+import Chatbot from "@/app/(site)/components";
 
 export const metadata: Metadata = {
   title: "SudarshanSoft Solutions",
@@ -36,7 +37,7 @@ export default function Home() {
       <Testimonial />
       {/* <Pricing /> */}
       {/* <Contact /> */}
-      
+      <Chatbot />
     </main>
   );
 }
