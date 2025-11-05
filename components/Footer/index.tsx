@@ -14,14 +14,14 @@ const contactItems = [
   },
   {
     label: "Phone",
-    value: "+1 (857) 421-9551",
+    value: "+91 9825280950",
     icon: "/images/icon/phone.svg",
   },
   {
     label: "Address",
     value: (
       <>
-         Boston, MA
+         Surat, IN
       </>
     ),
     icon: "/images/icon/location.svg",
@@ -61,9 +61,9 @@ const Footer = () => {
             <div className="flex gap-3">
               {[
                 { src: "/images/social/linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/sudarshansoft/" },
-                { src: "/images/social/instagram.svg", alt: "Instagram", href: "https://www.instagram.com/your-profile" },
-                { src: "/images/social/whatsapp.svg", alt: "WhatsApp", href: "https://wa.me/+18574219551" },
-                { src: "/images/social/facebook.svg", alt: "Facebook", href: "https://www.facebook.com/your-page" },
+                { src: "/images/social/instagram.svg", alt: "Instagram", href: "https://www.instagram.com/kashyap_rajodiya" },
+                { src: "/images/social/whatsapp.svg", alt: "WhatsApp", href: "https://wa.me/+919825280950" },
+                // { src: "/images/social/facebook.svg", alt: "Facebook", href: "https://www.facebook.com/your-page" },
               ].map((icon, index) => (
                 <Link
                   key={index}

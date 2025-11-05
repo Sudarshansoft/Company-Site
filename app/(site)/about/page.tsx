@@ -92,9 +92,9 @@ export default function AboutCompany() {
       </div>
       <WhyChooseUs />
       <OurProcess />
-      <div className="-mt-16">
+      {/* <div className="-mt-16">
         <TeamPage />
-      </div>
+      </div> */}
     </>
   );
 }

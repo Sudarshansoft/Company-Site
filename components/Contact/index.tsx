@@ -246,7 +246,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">Our Office</h4>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                    Boston, MA
+                    Surat, IN
                   </p>
                 </div>
               </div>
@@ -268,8 +268,8 @@ const Contact = () => {
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">Call Us</h4>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                    <a href="tel:+18574219551" className="hover:text-blue-500 transition-colors">
-                      +1 (857) 421-9551
+                    <a href="tel:+919825280950" className="hover:text-blue-500 transition-colors">
+                      +91 9825280950
                     </a>
                   </p>
                 </div>
@@ -290,7 +290,7 @@ const Contact = () => {
                   <FaLinkedin className="text-2xl sm:text-3xl" />
                 </a>
                 <a
-                  href="https://wa.me/+18574219551"
+                  href="https://wa.me/+919825280950"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-500 hover:text-green-700 transition-all duration-300"
@@ -298,21 +298,21 @@ const Contact = () => {
                   <FaWhatsapp className="text-2xl sm:text-3xl" />
                 </a>
                 <a
-                  href="https://www.instagram.com/your-profile"
+                  href="https://www.instagram.com/kashyap_rajodiya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-pink-500 hover:text-pink-700 transition-all duration-300"
                 >
                   <FaInstagram className="text-2xl sm:text-3xl" />
                 </a>
-                <a
-                  href="https://www.facebook.com/your-page"
+                {/* <a
+                  href="https://www.facebook.com/kashyap.rajodiya.5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 transition-all duration-300"
                 >
                   <FaFacebook className="text-2xl sm:text-3xl" />
-                </a>
+                </a> */}
               </div>
             </div>
           </motion.div>
